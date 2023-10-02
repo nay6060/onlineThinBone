@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
+
+:root{
+    --green:#00E77F;
+    --white:#fff;
+    --light-white:#aaa;
+    --black:#3d3d3d;
+    --light-bg:#4b4b4b;
+}
+
+*{
+    font-family: 'Rubik', sans-serif;
+    padding:0; margin:0;
+    box-sizing: border-box;
+    outline:none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+}
+
+*::selection{
+    color:var(--white);
+    background-color: var(--black);
+}
+
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top:10rem;
+}
+
+::-webkit-scrollbar{
+    width:1rem;
+    height:0.5rem;
+
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:var(--green);
+    border-radius: 5rem;
+}
+
+body{
+    background-color: var(--black);
+}
+
+section{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:2rem;
+}
+
+.header{
+    width:100%;
+    position:fixed;
+    background-color: var(--light-bg);
+    z-index: 10000;
+}
+
+.header .flex{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+}
+
+.header .flex img{
+    width:12rem;
+}
+
+.header .flex .menuFlex a{
+    font-size:2rem;
+    color:var(--light-white);
+    margin-left:2rem;
+}
+
+.header .flex .menuFlex a:hover{
+    color:var(--green);
+}
+
+.header .flex i{
+    font-size:2.7rem;
+    color:var(--light-white);
+    display:none;
+    cursor: pointer;
+}
+
+
+
+.fa-xmark{
+    transform:rotate(180deg);
+}
+
+.home .row{
+    display:flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    margin-top:7rem;
+    gap:1rem;
+}
+
+.home .row .about{
+    flex:1 1 40rem;
+    text-align: center;
+}
+
+.home .row .about h3{
+    font-size:10rem;
+    color:var(--white);
+    margin-bottom:4rem;
+    line-height:1.1;
+}
+
+.home .row .about h3 span{
+    color:var(--green);
+}
+
+.home .row .about a{
+    padding:1rem 2rem;
+    background-color: var(--light-bg);
+    border-radius:2rem;
+    font-size:2rem;
+    color:var(--white);
+}
+
+.home .row .about a:hover{
+    background-color: var(--white);
+    color:var(--black);
+}
+
+.home .row .img{
+    flex:1 1 40rem;
+}
+
+.home .row .img img{
+    width:100%;
+}
+
+.score{
+    margin-top:3rem;
+}
+.score .row{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:1.5rem;
+}
+
+.score .row .box{
+    padding:2rem;
+    background-color:var(--light-bg);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    border-radius: .6rem;
+}
+
+.score .row .box i{
+    font-size:5rem;
+    color:var(--green);
+}
+
+.score .row .box .info h3{
+    font-size:3rem;
+    color:var(--white);
+    margin-bottom:1rem;
+}
+
+.score .row .box .info p{
+    font-size:1.6rem;
+    color:var(--light-white);
+}
+
+.suggest{
+    margin-top:3rem;
+}
+
+.suggest .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.6rem;
+}
+
+.suggest .row .img{
+    flex:1 1 40rem;
+}
+
+.suggest .row .info{
+    flex:1 1 40rem;
+    text-align: center;
+}
+
+.suggest .row .info h3{
+    font-size: 3rem;
+    color:var(--white);
+    margin-bottom:2.5rem;
+}
+
+.suggest .row .info p{
+    font-size: 1.6rem;
+    color:var(--light-white);
+    line-height: 2.4;
+    margin-bottom: 3rem;
+}
+
+
+.suggest .row .info a{
+    padding:1rem 2rem;
+    background-color: var(--light-bg);
+    border-radius:2rem;
+    font-size:2rem;
+    color:var(--white);
+}
+
+.suggest .row .info a:hover{
+    background-color: var(--white);
+    color:var(--black);
+}
+
+#heading{
+    font-size:4rem;
+    color:var(--white);
+    text-align: center;
+}
+
+#heading span{
+    color:var(--green);
+}
+
+.courses{
+    margin-top:3rem;
+}
+
+.courses .courses-slider {
+    margin-top:4rem;
+}
+.courses .courses-slider .card{
+    width:40rem;
+    padding:3rem;
+    background-color:var(--light-bg);
+    border-radius: .6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.courses .courses-slider .card .info h3{
+    font-size:2rem;
+    color:var(--white);
+    margin-bottom:2rem;
+}
+
+.courses .courses-slider .card .info p{
+    font-size:1.5rem;
+    color:var(--light-white);
+    line-height: 1.5;
+
+}
+
+.swiper-pagination-bullet{
+    background-color: var(--light-white);
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--green);
+}
+
+.teachers{
+    margin-top:3rem;
+}
+
+.teachers .teacher-slider{
+    margin-top:3rem;
+}
+.teachers .teacher-slider .w .card {
+    margin-bottom:3rem;
+}
+
+.teachers .teacher-slider .w .card .img{
+    width:100%;
+    height: 55rem;
+    overflow: hidden;
+    border-radius:.6rem;
+    position:relative;
+}
+
+.teachers .teacher-slider .w .card .img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.teachers .teacher-slider .w .card .img .share{
+    position:absolute;
+    top:20px;
+    left:-60px;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.teachers .teacher-slider .w .card .img:hover .share{
+    left:20px;
+}
+
+.teachers .teacher-slider .w .card .img .share i{
+    padding:1rem;
+    background-color: var(--white);
+    border-radius: .6rem;
+    font-size:2rem;
+    cursor: pointer;
+}
+
+.teachers .teacher-slider .w .card .img .share i:hover{
+    background-color: var(--green);
+    color:var(--white);
+}
+
+.teachers .teacher-slider .w .card h3{
+    font-size:2rem;
+    color:var(--white);
+    margin-top:2rem;
+    text-align: center;
+}
+
+
+.reviews{
+    margin-top:3rem;
+}
+
+.reviews .review-slider{
+    margin-top:3rem;
+}
+
+.reviews .review-slider .w .card{
+    padding:3rem;
+    background-color: var(--light-bg);
+    border-radius: .6rem;
+    text-align: start;
+    margin-bottom: 3rem;
+}
+
+.reviews .review-slider .w .card p{
+    font-size:2rem;
+    line-height: 2;
+    color:var(--light-white);
+    margin-bottom:3rem;
+}
+
+.reviews .review-slider .w .card .info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:1.4rem;
+}
+
+.reviews .review-slider .w .card .info .img{
+    width:7rem;
+    height:7rem;
+    object-fit: contain;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.reviews .review-slider .w .card .info .img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.reviews .review-slider .w .card .info .detail h3{
+    font-size:2rem;
+    color:var(--white);
+    margin-bottom: 1rem;
+}
+
+.reviews .review-slider .w .card .info .detail .starContainer{
+    color:var(--green);
+}
+
+
+.contact{
+    margin-top:3rem;
+}
+
+.contact .row{
+    margin-top:3rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.6rem;
+}
+
+.contact .row .img{
+    flex:1 1 40rem;
+}
+
+.contact .row form{
+    flex:1 1 40rem;
+}
+
+.contact .row form .inputform{
+    margin-bottom:3rem;
+}
+
+.contact .row form .inputform input, .contact .row form .inputform [name=course]{
+    margin-top:1rem;
+    padding:1rem 2rem;
+    width:100%;
+    border-radius: .6rem;
+    background-color: var(--light-bg);
+    color:var(--light-white);
+    font-size:2rem;
+}
+
+.contact .row form .inputform label, .contact .row form .genderform label{
+    font-size: 2rem;
+    color:var(--light-white);
+}
+
+.contact .row form .genderform [for="gender"]{
+   /* background-color: yellow; */
+   display:block;
+}
+
+.contact .row form .genderform div input{
+    appearance: none;
+    margin-left:2rem;
+    margin-right:.5rem;
+    display:inline-block;
+    background-color: yellow;
+    width:2rem;
+    height:2rem;
+    background-color: var(--light-bg);
+    cursor: pointer;
+}
+
+.contact .row form .genderform div #male:checked{
+    border-radius: 50%;
+    background-color: var(--green);
+}
+
+.contact .row form .genderform div #female:checked{
+    border-radius: 50%;
+    background-color: var(--green);
+}
+
+
+.contact .row form a{
+    margin-top:3rem;
+    display: inline-block;
+    padding:1rem 2rem;
+    background-color: var(--light-bg);
+    border-radius:2rem;
+    font-size:2rem;
+    color:var(--white);
+}
+
+.contact .row form a:hover{
+    background-color: var(--white);
+    color:var(--black);   
+}
+
+footer{
+    width:100%;
+    background-color:var(--light-bg);
+}
+
+footer .footer .share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    margin-top:2rem;
+}
+
+footer .footer .share i{
+    width:5rem;
+    height:5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--light-white);
+    font-size:2rem;
+    border-radius: 50%;
+    color:var(--light-bg);
+    cursor: pointer;
+}
+
+footer .footer .share i:hover{
+    background-color:var(--green);
+    color:var(--white);
+}
+
+footer .footer .copyright{
+    padding:3rem 0rem;
+    color:var(--light-white);
+    font-size: 2rem;
+    text-align: center;
+    border-top:1px solid rgba(255, 255, 255, 0.444);
+    margin-top:3rem;
+}
+
+
+footer .footer .copyright span{
+    color:var(--green);
+}
+
+
+
+
+
+@media (max-width: 992px){
+    html{
+        font-size:55%;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px){
+
+    html{
+        font-size:50%;
+    }
+    .header .flex .menuFlex{
+        position:absolute;
+        width:100%;
+        top:99%;left:0;
+        border-top:1px solid var(--light-white);
+        border-bottom:1px solid var(--light-white);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: var(--light-bg);
+    }
+
+    .header .flex .active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex i{
+        display:block
+    }
+    
+    .header .flex .menuFlex a{
+        display:block;
+        margin:2rem;
+    }
+
+
+}
